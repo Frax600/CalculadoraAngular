@@ -1,0 +1,22 @@
+<h1 class="centro">Ejercicio 3</h1>
+<div class="fondo">
+    <h3>{{titulo}}</h3>
+    Primer número <input type="number" [(ngModel)]="num1">
+    <span *ngIf="num1">
+        Segundo número <input type="number" [(ngModel)]="num2">
+    </span>
+    Resultado: <span [style.color]="'red'">{{resultado}}</span>
+    <br>
+    <button (click)="sumar()">Sumar</button>
+    <button (click)="restar()">Restar</button>
+    <button (click)="multiplicar()">Multiplicar</button>
+    <button (click)="dividir()">Dividir</button>
+    <button (click)="binario()">Pasar a binario</button>
+    <button (click)="limpiarTodo()">Limpiar todo</button>
+</div>
+
+<h4>Historial de operaciones</h4>
+    <ul>
+        <li *ngFor="let elemento of historial">{{elemento}}</li>
+    </ul>
+
